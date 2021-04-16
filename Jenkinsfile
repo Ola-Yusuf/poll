@@ -58,9 +58,10 @@ pipeline {
 
         // If this is the master or develop branch being built then run
         // some additional integration tests
-        if (["master", "jenkins"].contains(env.BRANCH_NAME)) {
             stage("integration_tests") {
               steps {
+              if (["master", "jenkins"].contains(env.BRANCH_NAME)) {
+
                 sh 'vendor/bin/behat'
               }
             }
