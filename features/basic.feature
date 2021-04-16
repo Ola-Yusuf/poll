@@ -22,3 +22,11 @@ Given I have the payload:
 When I request "POST /api/question"
 Then the response is JSON
 Then the question contains a title of "Behat"
+
+Scenario: Delete Question
+Given I have the payload:
+"""
+"""
+When I request "DELETE /api/question/40"
+Then the response is JSON
+Then the response contains 49 records
