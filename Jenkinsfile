@@ -43,12 +43,12 @@ pipeline {
                 echo 'Hello World'
             }
         }
-        stage("composer_install") {
-        // Run `composer update` as a shell script
-        steps {
-                sh 'composer update'
-            }
-        }
+        // stage("composer_install") {
+        // // Run `composer update` as a shell script
+        // steps {
+        //         sh 'composer update'
+        //     }
+        // }
         stage("phpunit") {
             // Run PHPUnit
             steps {
