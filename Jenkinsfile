@@ -49,12 +49,12 @@ pipeline {
         //         sh 'composer update'
         //     }
         // }
-        stage("phpunit") {
-            // Run PHPUnit
-            steps {
-                sh 'vendor/bin/phpunit'
-            }
-        }
+        // stage("phpunit") {
+        //     // Run PHPUnit
+        //     steps {
+        //         sh 'vendor/bin/phpunit'
+        //     }
+        // }
 
         // If this is the master or develop branch being built then run
         // some additional integration tests
