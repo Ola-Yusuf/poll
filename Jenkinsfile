@@ -60,10 +60,10 @@ pipeline {
         // some additional integration tests
             stage("integration_tests") {
               steps {
-              if (["master", "jenkins"].contains(env.BRANCH_NAME)) {
+              // if (["master", "jenkins"].contains(env.BRANCH_NAME)) {
 
                 sh 'vendor/bin/behat'
-              }
+              // }
             }
             
         }
